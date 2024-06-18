@@ -5,11 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forcast</title>
+    <link rel="stylesheet" href="src/styles.css">
 </head>
 
 <body>
-    <h1> Ely Weather </h1>
-    <button>Search</button>
+    <h1 class="app-title"> Ely Weather </h1>
+    <main>
+        <div id="whole-app">
+            <div id="city-weather">
+                <h1 class="current-city"> Current City</h1>
+                <p class="current-city-details">
+                    Current Date, Weather Condition, </br> Humidity: Wind:
+                </p>
+            </div>
+            <div id="city-temperature">
+                <span class="temp-icon">🌞</span> <span class="temp-number"> 20 </span> <span
+                    class="temp-unit">°C</span>
+
+
+            </div>
+
+            <form id="city-search">
+                <input type="search" placeholder="My City" class="typesearch-city">
+                <input type="submit" value="Let's Go" class="buttonsearch-city">
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            This project was coded by
+            <a href="#" target="_blank">Elysha Quebral </a> and is <a href="#" target="_blank"> on GitHub </a> and <a
+                href="#" target="_blank"> hosted on Netlify </a>
+        </p>
+    </footer>
+
+
 </body>
 
 </html>
