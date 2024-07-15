@@ -24,7 +24,7 @@ body {
 #city-search {
   text-align: center;
 }
-.current-city {
+#current-city {
   display: block;
   margin: 5px 3px 5px 70px;
   font-size: 65px;
@@ -33,7 +33,7 @@ body {
   text-align: center;
   font-size: 75px;
 }
-.typesearch-city {
+#typesearch-city {
   background-color: rgb(255, 255, 255);
   border-radius: 50px;
   font-size: 15px;

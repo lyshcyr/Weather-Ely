@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather Forcast</title>
     <link rel="stylesheet" href="src/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,20 +19,19 @@
     <main>
         <div id="whole-app">
             <div id="city-weather">
-                <h1 class="current-city">London </h1>
+                <h1 id="current-city">London </h1>
                 <p class="current-city-details">
-                    <span id="current-date"></span>Current Date, Weather Condition, </br>
+                    <span id="current-date"></span>, Weather Condition, </br>
                     Humidity: Wind:
                 </p>
             </div>
             <div class="current-temp">
-                <span class="temp-icon">🌞</span> <span class="temp-number"> 20 </span> <span
-                    class="temp-unit">°C</span>
+                <span class="temp-icon">🌞</span> <span id="temp-number"> 20 </span> <span class="temp-unit">°C</span>
 
             </div>
 
             <form id="city-search">
-                <input type="search" placeholder="My City" class="typesearch-city">
+                <input type="search" placeholder="My City" id="typesearch-city">
                 <input type="submit" value="Let's Go" class="buttonsearch-city">
 
             </form>
@@ -41,12 +41,15 @@
     <footer>
         <p>
             This project was coded by
-            <a href="#" target="_blank">Elysha Quebral </a> and is <a href="#" target="_blank"> on GitHub </a> and <a
-                href="#" target="_blank"> hosted on Netlify </a>
+            <a href="https://github.com/lyshcyr" target="_blank">Elysha Quebral </a> and is <a href="#" target="_blank">
+                on GitHub </a> and <a href="https://weather-ely-week7.netlify.app/" target="_blank"> hosted on Netlify
+            </a>
         </p>
     </footer>
 
 
 </body>
+
+<script src="src/index.js"></script>
 
 </html>
