@@ -2,15 +2,23 @@ function displayTemperature(response) {
   let currentTemperature = document.querySelector("#temp-number");
   let temperature = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector("#current-city");
+  let currentDescription = document.querySelector("#current-condition");
+  let currentHumidity = document.querySelector("#current-humidity");
+  let currentWind = document.querySelector("#current-wind");
+  let currentIcon = document.querySelector("#temp-icon");
 
   cityElement.innerHTML = response.data.city;
   currentTemperature.innerHTML = temperature;
+  currentDescription.innerHTML = response.data.condition.description;
+  currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
+  currentWind.innerHTML = `${response.data.wind.speed}km/h`;
+  currentIcon.innerHTML = `<img src="${response.data.condition.icon_url}">`;
 }
 function search(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#typesearch-city");
   let city = searchInputElement.value;
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=70eec3d2cba7671oeet42062d679704f&units=metrics`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=70eec3d2cba7671oeet42062d679704f`;
   axios.get(apiUrl).then(displayTemperature);
 }
 
